@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaloguj się</title>
+    <style>
+        /* Dodatkowy styl dla przykładu */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 100px;
+            height: 100px;
+        }
+        .home-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .home-button a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            background-color: #ccc;
+            border-radius: 4px;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="ikona_g.png" alt="Logo sklepu">
+            <h2>Sportex</h2>
+        </div>
+        <h2>Zaloguj się</h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Hasło musi zawierać co najmniej jedną cyfrę, jedną małą literę, jedną dużą literę i mieć co najmniej 8 znaków" required>
+            <button type="submit">Zaloguj</button>
+        </form>
+        <p class="error-message" id="errorMessage"></p>
+        <p>Nie masz jeszcze konta? <a href="rejestracja.html">Zarejestruj się</a></p>
+        <div class="home-button">
+            <a href="index.html">Strona Główna</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Zapobieganie domyślnej akcji formularza
+
+            // Pobieranie wartości z pól formularza
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Tutaj umieść kod sprawdzający poprawność danych logowania
+            var correctEmail = "dawid.myska@onet.pl";
+            var correctPassword = "";
+
+            // Sprawdzenie, czy wprowadzone dane są poprawne
+            if (email === correctEmail && password === correctPassword) {
+                // Przekierowanie do strony głównej
+                window.location.href = "index.html";
+            } else {
+                // Wyświetlenie komunikatu o błędzie
+                document.getElementById("errorMessage").textContent = "Błąd logowania: Niepoprawny email lub hasło.";
+            }
+        });
+    </script>
+</body>
+</html>

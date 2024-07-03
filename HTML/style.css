@@ -1,0 +1,439 @@
+/* Dodatkowy styl dla przykładu */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background: linear-gradient(#22264b, #196155 );
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+header img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+section {
+    padding: 20px;
+}
+.search {
+    text-align: center;
+    padding: 20px;
+}
+.search input[type="text"] {
+    padding: 10px;
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.gallery img {
+    width: 450px; /* Zwiększenie szerokości zdjęć */
+    height: auto;
+    margin: 10px; /* Dodanie odstępu między zdjęciami */
+}
+/* Dodatkowy styl dla przykładu */
+.mapa {
+    text-align: center; /* Centrowanie mapy */
+}
+
+.video {
+    max-width: 100%; /* Maksymalna szerokość dla wideo */
+    height: auto; /* Automatyczna wysokość dla proporcji */
+    text-align: center;
+    margin-top: 20px; /* Dodanie odstępu od góry */
+    margin-bottom: 40px; /* Dodaj margines na dole */
+}
+
+.newsletter {
+    margin-top: 20px; /* Dodanie odstępu od góry */
+    text-align: center; /* Wyśrodkowanie formularza */
+    margin-bottom: 70px; /* Dodaj margines na dole */
+}
+
+/* Centrowanie elementów poziomo */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Dłuższa wyszukiwarka */
+.search input {
+    width: 30%; /* Ustawienie szerokości na 30% */
+}
+
+/* Styl dla sekcji polecane */
+.recommended {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap; /* Zatrzymuje zawijanie wierszy */
+    margin-top: 20px;
+    flex-direction: row; /* Ustawienie kierunku na wiersz */
+}
+
+.product {
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h3, .product p {
+    margin: 0;
+}
+
+.font-button button, .contrast-button button {
+    background-color: #196155; /* szary kolor */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.center {
+    text-align: center;
+}
+.recommended .product {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.recommended .product img {
+    width: 200px;
+    height: auto;
+}
+.recommended .product button {
+    background-color: #7f847f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.recommended .product:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+.recommended .product button:hover {
+    background-color: #646464;
+    transform: scale(1.1);
+}
+.font-button button img, .contrast-button button img {
+    width: 20px;
+    height: auto;
+}
+.font-button button:hover, .contrast-button button:hover {
+    background-color: #646464;
+    transform: scale(1.1);
+}
+header {
+    height: 80px; /* Nowa wysokość nagłówka */
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000; /* Zapewnia, że nagłówek jest zawsze na wierzchu */
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Zmniejszenie paddingu w kontenerze nagłówka */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+.search input[type="text"] {
+    width: 360px;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ddd;
+    border-right: none;
+}
+.search button[type="submit"] {
+    background-color: #7f847f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.search button[type="submit"]:hover {
+    background-color: #646464;
+}
+header h1 {
+    margin: 0; /* Usunięcie marginesów dla nagłówka */
+    display: flex;
+    align-items: center;
+}
+header h1 img {
+    margin-right: 10px;
+}
+nav ul {
+    margin: 0; /* Usunięcie marginesów dla listy nawigacji */
+    padding: 0; /* Usunięcie paddingu dla listy nawigacji */
+    list-style: none; /* Usunięcie stylu listy */
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px; /* Zmniejszenie marginesu między elementami listy nawigacji */
+}
+nav ul li:last-child {
+    margin-right: 0; /* Usunięcie marginesu dla ostatniego elementu listy nawigacji */
+}
+.nav-container {
+    background-color: #f0f0f0;
+    padding: 10px 20px; /* Ustawienie paddingu */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.nav-container ul {
+    display: flex;
+    align-items: center;
+}
+.nav-container ul li {
+    margin: 0 5px;
+}
+.nav-container ul li:last-child {
+    margin-right: 0;
+}
+.nav-container ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 5px; /* Ustawienie paddingu */
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.nav-container ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Styl dla wysepki */
+.floating-island {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #196155;
+    color: white;
+    padding: 5px 10px; /* Zmniejszenie paddingu */
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.floating-island:hover {
+    background-color: #646464;
+    transform: translateY(-50%) scale(1.05);
+}
+.floating-island img {
+    width: 25px;
+    height: auto;
+    display: block;
+    margin: 0 auto 5px; /* Zmniejszenie marginesu poniżej ikony */
+}
+.gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1%;
+    box-shadow: 0 4px 8px rgba(241, 236, 236, 0.1);
+    
+}
+.video {
+    margin: 40px 0;
+}
+.video video {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.newsletter {
+    margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.mapa iframe {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+.framed {
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: appear 1.5s ease-out forwards;
+}
+
+.framed span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    margin: 0 85px; /* Dodanie marginesów między słowami */
+}
+
+
+.framed span:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.framed span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.framed span:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.center h1 {
+    text-align: center;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Kontrast wysokiego poziomu */
+body.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+body.high-contrast header,
+body.high-contrast footer {
+    background: #fff;
+    color: #000;
+}
+
+body.high-contrast nav {
+    background-color: #000;
+}
+
+body.high-contrast nav ul li a {
+    color: #000;
+    background: #fff;
+    padding: 5px 5px; /* Taki sam padding jak w trybie normalnym */
+    border-radius: 5px; /* Zaokrąglenie rogów przycisków w nawigacji */
+}
+
+body.high-contrast .product {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+body.high-contrast .newsletter {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Styl przycisków kontrastu i zmiany rozmiaru czcionki */
+.font-button, .contrast-button {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.font-button img, .contrast-button img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.center h1 .framed span {
+animation: skip 1s infinite alternate;
+}
+
+@keyframes skip {
+0% {
+transform: translateY(0);
+}
+100% {
+transform: translateY(-5px); /* Skok o 5 pikseli w górę */
+}
+}
+
+
+.center h1 .framed {
+font-size: 2em;
+}

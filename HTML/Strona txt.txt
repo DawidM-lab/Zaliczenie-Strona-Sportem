@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Moja witryna</title>
+     <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Jak nauczyć się programowania</h1>
+    
+    Uczymy się dzisiaj  <b>HTML</b>
+  </body>
+</html>

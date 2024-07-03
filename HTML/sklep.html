@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportex</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dodatkowe style */
+ 
+    </style>
+    <script>
+        function toggleFontSize() {
+            var currentSize = document.body.style.fontSize;
+            if (currentSize === '1.2em') {
+                document.body.style.fontSize = '1em';
+            } else {
+                document.body.style.fontSize = '1.2em';
+            }
+        }
+
+        function toggleContrast() {
+            var body = document.body;
+            body.classList.toggle('high-contrast');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="search">
+            <!-- Wyszukiwarka -->
+            <input type="text" placeholder="Szukaj produktów..." style="width: 360px;"> <!-- Tutaj możesz zmieniać wartość 'width' -->
+            <button type="submit">Szukaj</button>
+        </div>
+        
+        <!-- Logo z nazwą -->
+        <h1><img src="ikona_g.png" alt="Logo"> Sportex</h1>
+        <!-- Zakładki -->
+        <nav class="nav-container">
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="sklep.html">Sklep</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="koszyk.html">Koszyk</a></li>
+                <li><a href="zaloguj.html">Zaloguj</a></li>
+                    <li class="font-button">
+                        <button onclick="toggleFontSize()">
+                            <img src="font_size.png" alt="Zmiana rozmiaru czcionki">
+                        </button>
+                    </li>
+                    <!-- Przycisk kontrastu -->
+                    <li class="contrast-button">
+                        <button onclick="toggleContrast()">
+                            <img src="contrast.png" alt="Przycisk kontrastu">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1 class="center"><span class="framed"><span></span><span>Ubrania</span><span></span></span></h1>
+
+
+</div><hr><div class="product-row">
+
+
+    <section class="recommended center">
+        <div class="product">
+            <img src="product1.jpg" alt="Produkt 1">
+            <h3>Piłka</h3>
+            <p>Cena: 50 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Produkt 2">
+            <h3>Ciężarki</h3>
+            <p>Cena: 70 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Produkt 3">
+            <h3>T-shirt</h3>
+            <p>Cena: 60 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+        <div class="product">
+            <img src="product4.jpg" alt="Produkt 4">
+            <h3>Piłeczka - Golf</h3>
+            <p>Cena: 80 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+    </section>
+
+    <h1 class="center"><span class="framed"><span></span><span>Siłownia</span><span></span></span></h1>
+
+
+</div><hr><div class="product-row">
+
+    
+
+    <section class="recommended center">
+        <div class="product">
+            <img src="product1.jpg" alt="Produkt 1">
+            <h3>Piłka</h3>
+            <p>Cena: 50 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Produkt 2">
+            <h3>Ciężarki</h3>
+            <p>Cena: 70 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Produkt 3">
+            <h3>T-shirt</h3>
+            <p>Cena: 60 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+        <div class="product">
+            <img src="product4.jpg" alt="Produkt 4">
+            <h3>Piłeczka - Golf</h3>
+            <p>Cena: 80 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+    </section>
+
+    <h1 class="center"><span class="framed"><span></span><span>Koszykówka</span><span></span></span></h1>
+
+
+</div><hr><div class="product-row">
+
+    <section class="recommended center">
+        <div class="product">
+            <img src="product1.jpg" alt="Produkt 1">
+            <h3>Piłka</h3>
+            <p>Cena: 50 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Produkt 2">
+            <h3>Ciężarki</h3>
+            <p>Cena: 70 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Produkt 3">
+            <h3>T-shirt</h3>
+            <p>Cena: 60 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+        <div class="product">
+            <img src="product4.jpg" alt="Produkt 4">
+            <h3>Piłeczka - Golf</h3>
+            <p>Cena: 80 zł</p>
+            <button>Kup Teraz</button>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Sklep Sportowy. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>

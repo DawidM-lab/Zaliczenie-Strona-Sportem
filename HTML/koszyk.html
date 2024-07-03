@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koszyk - Sportex</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+    <style>
+
+        /* Styl dla zdjęć produktów */
+        .cart-item img {
+            display: block; /* Ustawiamy obrazek jako blokowy, aby móc zastosować marginesy */
+            margin: 0 auto; /* Wyśrodkowanie obrazka wewnątrz elementu koszyka */
+            width: 300px; /* Ustawiamy szerokość na 300 pikseli */
+            height: auto; /* Ustawiamy wysokość automatycznie, aby zachować proporcje */
+        }
+
+        /* Styl dla kontenera z elementami koszyka */
+        .cart-items {
+            margin: 0 auto; /* Wyśrodkowanie elementów koszyka na stronie */
+            max-width: 600px; /* Maksymalna szerokość kontenera */
+            padding: 20px; /* Dodanie odstępu wokół elementów koszyka */
+            border: 2px solid #ccc; /* Dodanie obramowania wokół elementów koszyka */
+            border-radius: 10px; /* Zaokrąglenie rogów */
+            position: relative; /* Ustawiamy pozycję względną, aby móc zastosować absolutną pozycję dla elementów wewnątrz */
+        }
+
+        /* Styl dla elementów szczegółów przedmiotu */
+        .item-details {
+            text-align: center; /* Wyśrodkowanie tekstu wewnątrz elementów koszyka */
+        }
+
+        /* Styl dla podsumowania cen */
+        .summary {
+            position: absolute; /* Ustawiamy pozycję absolutną, aby umieścić elementy w prawym dolnym rogu */
+            bottom: 65px; /* Odległość od dolnej krawędzi */
+            left: 900px; /* Ustawiamy odległość od lewej krawędzi */
+            text-align: left; /* Wyśrodkowanie tekstu w lewo */
+        }
+
+        /* Styl dla przycisku "Zapłać" */
+        .pay-button {
+            background-color: #7f847f;
+            border: none;
+            color: white;
+            padding: 10px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+       <script>
+        function toggleFontSize() {
+            var currentSize = document.body.style.fontSize;
+            if (currentSize === '1.2em') {
+                document.body.style.fontSize = '1em';
+            } else {
+                document.body.style.fontSize = '1.2em';
+            }
+        }
+
+        function toggleContrast() {
+            var body = document.body;
+            body.classList.toggle('high-contrast');
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="search">
+            <!-- Wyszukiwarka -->
+            <input type="text" placeholder="Szukaj produktów..." style="width: 360px;"> <!-- Tutaj możesz zmieniać wartość 'width' -->
+            <button type="submit">Szukaj</button>
+        </div>
+        
+        <!-- Logo z nazwą -->
+        <h1><img src="ikona_g.png" alt="Logo"> Sportex</h1>
+        <!-- Zakładki -->
+        <nav class="nav-container">
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="sklep.html">Sklep</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="koszyk.html">Koszyk</a></li>
+                <li><a href="zaloguj.html">Zaloguj</a></li>
+                 <li class="font-button">
+                        <button onclick="toggleFontSize()">
+                            <img src="font_size.png" alt="Zmiana rozmiaru czcionki">
+                        </button>
+                    </li>
+                    <!-- Przycisk kontrastu -->
+                    <li class="contrast-button">
+                        <button onclick="toggleContrast()">
+                            <img src="contrast.png" alt="Przycisk kontrastu">
+                        </button>
+                    </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cart-items">
+        <!-- Tutaj będą dodawane elementy koszyka dynamicznie przez JavaScript -->
+        <!-- Przykładowe elementy koszyka -->
+        <div class="cart-item">
+            <img src="product1.jpg" alt="Produkt 1">
+            <div class="item-details">
+                <h2>Piłka</h2>
+                <p>Cena: 50 zł</p>
+                <button class="remove-button">Usuń</button>
+            </div>
+        </div>
+        <div class="cart-item">
+            <img src="product2.jpg" alt="Produkt 2">
+            <div class="item-details">
+                <h2>Ciężarki</h2>
+                <p>Cena: 70 zł</p>
+                <button class="remove-button">Usuń</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Podsumowanie cen -->
+    <div class="summary">
+        <p>Suma: <strong>120 zł</strong></p>
+        <button class="pay-button">Zapłać</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sklep Sportowy. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>

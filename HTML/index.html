@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportex</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleFontSize() {
+            var currentSize = document.body.style.fontSize;
+            var newSize = currentSize === '1.2em' ? '1em' : '1.2em';
+            document.body.style.fontSize = newSize;
+            var framedSpans = document.querySelectorAll('.framed span');
+            framedSpans.forEach(function(span) {
+                span.style.fontSize = '1em';
+            });
+        }
+        function toggleContrast() {
+            var body = document.body;
+            body.classList.toggle('high-contrast');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="search">
+            <input type="text" placeholder="Szukaj produktów..." tabindex="1">
+            <button type="submit" tabindex="2">Szukaj</button>
+        </div>
+        <h1><img src="ikona_g.png" alt="Logo"> Sportex</h1>
+        <nav class="nav-container">
+            <ul>
+                <li><a href="index.html" tabindex="3">Strona główna</a></li>
+                <li><a href="sklep.html" tabindex="4">Sklep</a></li>
+                <li><a href="kontakt.html" tabindex="5">Kontakt</a></li>
+                <li><a href="koszyk.html" tabindex="6">Koszyk</a></li>
+                <li><a href="zaloguj.html" tabindex="7">Zaloguj</a></li>
+                <li class="font-button">
+                    <button onclick="toggleFontSize()" tabindex="8">
+                        <img src="font_size.png" alt="Zmiana rozmiaru czcionki">
+                    </button>
+                </li>
+                <li class="contrast-button">
+                    <button onclick="toggleContrast()" tabindex="9">
+                        <img src="contrast.png" alt="Przycisk kontrastu">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="floating-island">
+            <img src="w1.png" aria-describedby="Social 1">
+        </aside>
+        <aside class="floating-island" style="top: 55%;">
+            <img src="w2.png" aria-describedby="Social 2">
+        </aside>
+        <aside class="floating-island" style="top: 60%;">
+            <img src="w3.png" aria-labelledby="Social 3">
+        </aside>
+        <aside class="floating-island" style="top: 65%;">
+            <img src="w4.png" aria-labelledby="Social 4">
+        </aside>
+        <section class="gallery">
+            <img src="stronaglowna1.jpg" alt="Zdjęcie 1" label="zdjecie strony głownej">
+            <img src="stronaglowna2.jpg" aria="Zdjęcie 2" label="zdjecie strony głownej">
+            <img src="stronaglowna3.jpg" longdesc="Zdjęcie 3" label="zdjecie strony głownej">            
+            </section>
+
+            <h1 class="center"><span class="framed"><span>Be</span><span>The</span><span>Best.</span></span></h1>
+
+        
+        <figure class="video center" style="border: 1px solid #ddd; border-radius: 10px; 
+                                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <video controls autoplay loop width="800">
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+            <figcaption>Good shot</figcaption>
+        </figure>
+
+        <h1 class="center"><span class="framed"><span></span><span>Polecane</span><span></span></span></h1>
+
+        <section class="recommended center">
+            <div class="product">
+                <img src="product1.jpg" alt="Produkt 1">
+                <h3>Piłka</h3>
+                <p>Cena: 50 zł</p>
+                <button>Kup Teraz</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Produkt 2">
+                <h3>Ciężarki</h3>
+                <p>Cena: 70 zł</p>
+                <button>Kup Teraz</button>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Produkt 3">
+                <h3>T-shirt</h3>
+                <p>Cena: 60 zł</p>
+                <button>Kup Teraz</button>
+            </div>
+            <div class="product">
+                <img src="product4.jpg" alt="Produkt 4">
+                <h3>Piłeczka - Golf</h3>
+                <p>Cena: 80 zł</p>
+                <button>Kup Teraz</button>
+            </div>
+        </section>
+        <section class="newsletter center">
+            <h2>Zapisz się do newslettera</h2>
+            <form action="zapisz_newsletter.php" method="POST">
+                <label for="email">Twój e-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Zapisz się</button>
+            </form>
+        </section>
+        <section class="mapa">
+            <h2>Znajdź nas</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.582792208132!2d-122.08409628529269!3d37.422366419733034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e3e24d77e35%3A0x7f29d0a338b07f75!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1638860682852!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sklep Sportowy. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>
